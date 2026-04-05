@@ -3,7 +3,7 @@
   year = 2016,
   part = 1,
   type = A,
-  show-answers = false,
+  show-answers = true,
 }
 \begin{document}
 
@@ -201,7 +201,7 @@
 
 \begin{enumerate}[resume]
   % ---- 第 9 题 ----
-  \item （本题满分 16 分）\;
+  \item （本题满分 16 分）
     在 $\triangle ABC$ 中，已知
     $\overrightarrow{AB} \cdot \overrightarrow{AC}
      + 2\,\overrightarrow{BA} \cdot \overrightarrow{BC}
@@ -239,10 +239,10 @@
     \end{solution}
 
   % ---- 第 10 题 ----
-  \item （本题满分 20 分）\;
+  \item （本题满分 20 分）
     已知 $f(x)$ 是 $\mathbb{R}$ 上的奇函数，$f(1) = 1$，
-    且对任意 $x > 0$，均有
-    $f\!\left(\dfrac{x}{x+1}\right) = xf(x)$.求
+    且对任意 $x < 0$，均有
+    $f\!\left(\dfrac{x}{x-1}\right) = xf(x)$.求
     \[
       f(1)\,f\!\left(\frac{1}{100}\right)
       + f\!\left(\frac{1}{2}\right) f\!\left(\frac{1}{99}\right)
@@ -254,33 +254,40 @@
     \begin{solution}
       设 $a_n = f\!\left(\dfrac{1}{n}\right)$（$n = 1, 2, 3, \ldots$），则 $a_1 = f(1) = 1$.
 
-      在 $f\!\left(\dfrac{x}{x+1}\right) = xf(x)$ 中取 $x = \dfrac{1}{k}$
-      （$k \in \mathbb{N}^*$，$k \geq 1$），注意到
-      $\dfrac{x}{x+1} = \dfrac{1/k}{1/k + 1} = \dfrac{1}{k+1}$，
+      在 $f\!\left(\dfrac{x}{x-1}\right) = xf(x)$ 中取 $x = -\dfrac{1}{k}$
+      （$k \in \mathbb{N}^*$），注意到
+      $\dfrac{x}{x-1} = \dfrac{-1/k}{-1/k - 1} = \dfrac{1}{k+1}$，
       及 $f(x)$ 为奇函数，可知
       \[
         f\!\left(\frac{1}{k+1}\right)
+        = -\frac{1}{k}\,f\!\left(-\frac{1}{k}\right)
         = \frac{1}{k}\,f\!\left(\frac{1}{k}\right),
       \]
-      即 $a_{k+1} = \dfrac{a_k}{k}$.\hfill（5 分）
+      即 $\dfrac{a_{k+1}}{a_k} = \dfrac{1}{k}$.\hfill（5 分）
 
       从而
-      $a_n = \dfrac{a_1}{1 \cdot 2 \cdots (n-1)} = \dfrac{1}{(n-1)!}$.\hfill（10 分）
+      \[
+        a_n = a_1 \cdot \prod_{k=1}^{n-1} \frac{a_{k+1}}{a_k}
+            = \prod_{k=1}^{n-1} \frac{1}{k}
+            = \frac{1}{(n-1)!}.
+      \]
+      \hfill（10 分）
 
       因此
       \begin{align*}
         \sum_{i=1}^{50} a_i\, a_{101-i}
         &= \sum_{i=1}^{50} \frac{1}{(i-1)!\,(100-i)!}
-         = \sum_{j=0}^{49} \frac{1}{j!\,(99-j)!} \\
-        &= \frac{1}{99!} \sum_{j=0}^{49} \binom{99}{j}
-         = \frac{1}{99!} \cdot \frac{2^{99}}{2}
+         = \sum_{i=0}^{49} \frac{1}{i!\,(99-i)!} \\
+        &= \frac{1}{99!} \sum_{i=0}^{49} C_{99}^i
+         = \frac{1}{99!} \sum_{i=0}^{49} \frac{1}{2}\bigl(C_{99}^i + C_{99}^{99-i}\bigr)
+         = \frac{1}{99!} \times \frac{1}{2} \times 2^{99}
          = \frac{2^{98}}{99!}.
       \end{align*}
       \hfill（20 分）
     \end{solution}
 
   % ---- 第 11 题 ----
-  \item （本题满分 20 分）\;
+  \item （本题满分 20 分）
     在平面直角坐标系 $xOy$ 中，$F$ 是 $x$ 轴正半轴上的一个动点.
     以 $F$ 为焦点、$O$ 为顶点作抛物线 $C$.
     设 $P$ 是第一象限内 $C$ 上的一点，$Q$ 是 $x$ 轴负半轴上一点，
