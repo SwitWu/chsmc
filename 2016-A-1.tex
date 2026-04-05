@@ -1,0 +1,364 @@
+\documentclass{chsmc}
+\chsmcsetup{
+  year = 2016,
+  part = 1,
+  type = A,
+  show-answers = false,
+}
+\begin{document}
+
+\section{填空题：本大题共 8 小题，每小题 8 分，共 64 分.}
+
+\begin{enumerate}
+  % ---- 第 1 题 ----
+  \item 设实数 $a$ 满足 $a < 9a^3 - 11a < |a|$，则 $a$ 的取值范围是\blankline
+    \answer{$a \in \left( -\dfrac{2\sqrt{3}}{3},\, -\dfrac{\sqrt{10}}{3} \right)$}
+    \begin{solution}
+      由 $a < |a|$ 可得 $a < 0$，原不等式可变形为
+      \[ 1 > \frac{9a^3 - 11a}{a} > \frac{|a|}{a} = -1, \]
+      即 $-1 < 9a^2 - 11 < 1$，所以 $a^2 \in \left(\dfrac{10}{9},\, \dfrac{4}{3}\right)$.
+      又 $a < 0$，故 $a \in \left( -\dfrac{2\sqrt{3}}{3},\, -\dfrac{\sqrt{10}}{3} \right)$.
+    \end{solution}
+
+  % ---- 第 2 题 ----
+  \item 设复数 $z$, $w$ 满足 $|z| = 3$，
+    $(\bar{z} + w)(z - \bar{w}) = 7 + 4\ii$，其中 $\ii$ 是虚数单位，
+    $\bar{z}$, $\bar{w}$ 分别表示 $z$, $w$ 的共轭复数，
+    则 $(\bar{z} + 2w)(z - 2\bar{w})$ 的模为\blankline
+    \answer{$\sqrt{65}$}
+    \begin{solution}
+      由运算性质，
+      \[
+        7 + 4\ii = (\bar{z} + w)(z - \bar{w})
+        = |z|^2 - |w|^2 + (wz - \overline{wz}),
+      \]
+      因为 $|z|^2$ 与 $|w|^2$ 为实数，$\operatorname{Re}(wz - \overline{wz}) = 0$，
+      故 $|z|^2 - |w|^2 = 7$，$wz - \overline{wz} = 4\ii$，
+      又 $|z| = 3$，所以 $|w| = \sqrt{2}$.从而
+      \[
+        (\bar{z} + 2w)(z - 2\bar{w})
+        = |z|^2 - 4|w|^2 + 2(wz - \overline{wz})
+        = 9 - 8 + 8\ii = 1 + 8\ii.
+      \]
+      因此，$|(\bar{z} + 2w)(z - 2\bar{w})| = \sqrt{1^2 + 8^2} = \sqrt{65}$.
+    \end{solution}
+
+  % ---- 第 3 题 ----
+  \item 正实数 $u$, $v$, $w$ 均不等于 $1$，若
+    $\log_u vw + \log_v w = 5$，$\log_v u + \log_w v = 3$，
+    则 $\log_w u$ 的值为\blankline
+    \answer{$\dfrac{4}{5}$}
+    \begin{solution}
+      令 $\log_u v = a$，$\log_v w = b$，则
+      $\log_v u = \dfrac{1}{a}$，$\log_w v = \dfrac{1}{b}$，
+      $\log_u vw = \log_u v + \log_u v \cdot \log_v w = a + ab$，
+      条件化为 $a + ab + b = 5$，$\dfrac{1}{a} + \dfrac{1}{b} = 3$，
+      由此可得 $ab = \dfrac{5}{4}$.因此
+      $\log_w u = \log_w v \cdot \log_v u = \dfrac{1}{ab} = \dfrac{4}{5}$.
+    \end{solution}
+
+  % ---- 第 4 题 ----
+  \item 袋子 $A$ 中装有 $2$ 张 $10$ 元纸币和 $3$ 张 $1$ 元纸币，
+    袋子 $B$ 中装有 $4$ 张 $5$ 元纸币和 $3$ 张 $1$ 元纸币.
+    现随机从两个袋子中各取出两张纸币，则 $A$ 中剩下的纸币面值之和大于
+    $B$ 中剩下的纸币面值之和的概率为\blankline
+    \answer{$\dfrac{9}{35}$}
+    \begin{solution}
+      一种取法符合要求，等价于从 $A$ 中取走的两张纸币的总面值 $a$ 小于
+      从 $B$ 中取走的两张纸币的总面值 $b$，从而 $a < b \leq 5 + 5 = 10$.
+      故只能从 $A$ 中取走两张 $1$ 元纸币，相应的取法数为 $\binom{3}{2} = 3$.
+      又此时 $b > a = 2$，即从 $B$ 中取走的两张纸币不能都是 $1$ 元纸币，
+      相应有 $\binom{7}{2} - \binom{3}{2} = 18$ 种取法.因此，所求的概率为
+      \[
+        \frac{3 \times 18}{\binom{5}{2} \times \binom{7}{2}}
+        = \frac{54}{10 \times 21} = \frac{9}{35}.
+      \]
+    \end{solution}
+
+  % ---- 第 5 题 ----
+  \item 设 $P$ 为一圆锥的顶点，$A$, $B$, $C$ 是其底面圆周上的三点，
+    满足 $\angle ABC = 90°$，$M$ 为 $AP$ 的中点. 若 $AB = 1$，$AC = 2$，
+    $AP = \sqrt{2}$，则二面角 $M$-$BC$-$A$ 的大小为\blankline
+    \answer{$\arctan\dfrac{2}{3}$}
+    \begin{solution}
+      由 $\angle ABC = 90°$ 知，$AC$ 为底面圆的直径.
+      设底面中心为 $O$，则 $PO \perp$ 平面 $ABC$.
+      易知 $AO = \dfrac{1}{2}AC = 1$，进而 $PO = \sqrt{AP^2 - AO^2} = 1$.
+
+      设 $H$ 为 $M$ 在底面上的射影，则 $H$ 为 $AO$ 的中点.
+      在底面中作 $HK \perp BC$ 于点 $K$，则由三垂线定理知
+      $MK \perp BC$，从而 $\angle MKH$ 为二面角 $M$-$BC$-$A$ 的平面角.
+
+      因 $MH = \dfrac{1}{2}PO = \dfrac{1}{2}$，
+      结合 $HK \parallel AB$ 知，
+      $\dfrac{HK}{AB} = \dfrac{HC}{AC} = \dfrac{3/2}{2} = \dfrac{3}{4}$，
+      即 $HK = \dfrac{3}{4}$，
+      这样
+      $\tan\angle MKH = \dfrac{MH}{HK} = \dfrac{1/2}{3/4} = \dfrac{2}{3}$.
+      故二面角 $M$-$BC$-$A$ 的大小为 $\arctan\dfrac{2}{3}$.
+    \end{solution}
+
+  % ---- 第 6 题 ----
+  \item 设函数
+    $f(x) = \sin^4 \dfrac{kx}{10} + \cos^4 \dfrac{kx}{10}$，
+    其中 $k$ 是一个正整数. 若对任意实数 $a$，均有
+    $\bigl\{ f(x) \bigm| a < x < a + 1 \bigr\}
+     = \bigl\{ f(x) \bigm| x \in \mathbb{R} \bigr\}$，
+    则 $k$ 的最小值为\blankline
+    \answer{$16$}
+    \begin{solution}
+      由条件知，
+      \begin{align*}
+        f(x) & = \left(\sin^2 \frac{kx}{10}
+               + \cos^2 \frac{kx}{10}\right)^2
+               - 2\sin^2 \frac{kx}{10}\cos^2 \frac{kx}{10} \\
+             & = 1 - \frac{1}{2}\sin^2 \frac{kx}{5}
+               = \frac{3}{4} + \frac{1}{4}\cos\frac{2kx}{5},
+      \end{align*}
+      其中当且仅当 $x = \dfrac{5m\pi}{k}$（$m \in \mathbb{Z}$）时，
+      $f(x)$ 取到最大值.根据条件知，任意一个长为 $1$ 的开区间 $(a,\,a+1)$
+      至少包含 $f(x)$ 的一个完整周期，从而 $\dfrac{5\pi}{k} \leq 1$，
+      即 $k \geq 5\pi$.
+
+      反之，当 $k \geq 5\pi$ 时，任意一个开区间 $(a,\,a+1)$ 均包含
+      $f(x)$ 的一个完整周期，此时
+      $\{f(x) \mid a < x < a+1\} = \{f(x) \mid x \in \mathbb{R}\}$ 成立.
+      综上可知，正整数 $k$ 的最小值为 $[5\pi]+1 = 16$.
+    \end{solution}
+
+  % ---- 第 7 题 ----
+  \item 双曲线 $C$ 的方程为 $x^2 - \dfrac{y^2}{3} = 1$，左、右焦点分别为 $F_1$、$F_2$.
+    过点 $F_2$ 作一直线与双曲线 $C$ 的右半支交于点 $P$, $Q$，
+    使得 $\angle F_1 PQ = 90°$，则 $\triangle F_1 PQ$ 的内切圆半径是\blankline
+    \answer{$\sqrt{7} - 1$}
+    \begin{solution}
+      由双曲线的性质知，$|F_1 F_2| = 2\sqrt{1 + 3} = 4$，
+      $|PF_1| - |PF_2| = |QF_1| - |QF_2| = 2$.
+
+      因 $\angle F_1 PQ = 90°$，即 $F_1 P \perp PF_2$，故
+      $|PF_1|^2 + |PF_2|^2 = |F_1 F_2|^2 = 16$.
+
+      $|PF_1| + |PF_2|
+       = \sqrt{(|PF_1| - |PF_2|)^2 + 4|PF_1||PF_2|}$，
+      其中 $|PF_1||PF_2| = \dfrac{16 - 4}{2} = 6$，
+      故 $|PF_1| + |PF_2| = \sqrt{4 + 24} = 2\sqrt{7}$.
+
+      从而直角 $\triangle F_1 PQ$ 的内切圆半径是
+      \begin{align*}
+        r &= \frac{1}{2}\bigl(|F_1 P| + |PQ| - |F_1 Q|\bigr) \\
+          &= \frac{1}{2}\bigl((|PF_1| + |PF_2|) - (|QF_1| - |QF_2|)\bigr) \\
+          &= \frac{1}{2}(2\sqrt{7} - 2) = \sqrt{7} - 1.
+      \end{align*}
+    \end{solution}
+
+  % ---- 第 8 题 ----
+  \item 设 $a_1$, $a_2$, $a_3$, $a_4$ 是 $1, 2, \ldots, 100$ 中的 $4$ 个互不相同的数，满足
+    \[
+      (a_1^2 + a_2^2 + a_3^2)(a_2^2 + a_3^2 + a_4^2)
+      = (a_1 a_2 + a_2 a_3 + a_3 a_4)^2,
+    \]
+    则这样的有序数组 $(a_1, a_2, a_3, a_4)$ 的个数为\blankline
+    \answer{$40$}
+    \begin{solution}
+      由柯西不等式知，
+      $(a_1^2 + a_2^2 + a_3^2)(a_2^2 + a_3^2 + a_4^2) \geq (a_1 a_2 + a_2 a_3 + a_3 a_4)^2$，
+      等号成立的充分必要条件是
+      $\dfrac{a_1}{a_2} = \dfrac{a_2}{a_3} = \dfrac{a_3}{a_4}$，
+      即 $a_1, a_2, a_3, a_4$ 成等比数列.于是问题等价于计算满足
+      $\{a_1, a_2, a_3, a_4\} \subseteq \{1, 2, \ldots, 100\}$
+      的等比数列 $a_1, a_2, a_3, a_4$ 的个数.
+
+      设等比数列的公比 $q \neq 1$，且 $q$ 为有理数.记 $q = \dfrac{n}{m}$，
+      其中 $m, n$ 为互素的正整数，且 $m \neq n$.
+
+      先考虑 $n > m$ 的情况.此时
+      $a_4 = a_1\left(\dfrac{n}{m}\right)^3 = \dfrac{a_1 n^3}{m^3}$，
+      注意到 $m^3, n^3$ 互素，故 $l = \dfrac{a_1}{m^3}$ 为正整数.
+      相应地，$a_1, a_2, a_3, a_4$ 分别等于 $m^3 l, m^2 n l, m n^2 l, n^3 l$.
+      对任意给定的 $q = \dfrac{n}{m} > 1$，满足条件的等比数列个数即为满足
+      $n^3 l \leq 100$ 的正整数 $l$ 的个数，即 $\left\lfloor\dfrac{100}{n^3}\right\rfloor$.
+
+      由于 $5^3 > 100$，故仅需考虑
+      $q = 2,\; 3,\; \dfrac{3}{2},\; 4,\; \dfrac{4}{3}$
+      这些情况，相应的等比数列的个数为
+      \[
+        \left\lfloor\frac{100}{8}\right\rfloor
+        + \left\lfloor\frac{100}{27}\right\rfloor
+        + \left\lfloor\frac{100}{27}\right\rfloor
+        + \left\lfloor\frac{100}{64}\right\rfloor
+        + \left\lfloor\frac{100}{64}\right\rfloor
+        = 12 + 3 + 3 + 1 + 1 = 20.
+      \]
+
+      当 $n < m$ 时，由对称性可知，亦有 $20$ 个满足条件的等比数列.
+
+      综上可知，共有 $40$ 个满足条件的有序数组 $(a_1, a_2, a_3, a_4)$.
+    \end{solution}
+\end{enumerate}
+
+\bigskip
+\section{解答题：本大题共 3 小题，共 56 分.解答应写出文字说明、证明过程或演算步骤.}
+
+\begin{enumerate}[resume]
+  % ---- 第 9 题 ----
+  \item （本题满分 16 分）\;
+    在 $\triangle ABC$ 中，已知
+    $\overrightarrow{AB} \cdot \overrightarrow{AC}
+     + 2\,\overrightarrow{BA} \cdot \overrightarrow{BC}
+     = 3\,\overrightarrow{CA} \cdot \overrightarrow{CB}$.
+    求 $\sin C$ 的最大值.
+    \begin{solution}
+      由数量积的定义及余弦定理知，
+      $\overrightarrow{AB} \cdot \overrightarrow{AC} = cb\cos A = \dfrac{b^2 + c^2 - a^2}{2}$.
+      同理得，
+      $\overrightarrow{BA} \cdot \overrightarrow{BC} = \dfrac{a^2 + c^2 - b^2}{2}$，\;
+      $\overrightarrow{CA} \cdot \overrightarrow{CB} = \dfrac{a^2 + b^2 - c^2}{2}$.
+
+      故已知条件化为
+      \[
+        (b^2 + c^2 - a^2) + 2(a^2 + c^2 - b^2) = 3(a^2 + b^2 - c^2),
+      \]
+      即 $a^2 + 2b^2 = 3c^2$.\hfill（8 分）
+
+      由余弦定理及基本不等式，得
+      \[
+        \cos C = \frac{a^2 + b^2 - c^2}{2ab}
+               = \frac{a^2 + b^2 - \frac{a^2 + 2b^2}{3}}{2ab}
+               = \frac{2a^2 + b^2}{6ab}
+               = \frac{1}{6}\!\left(\frac{2a}{b} + \frac{b}{a}\right)
+               \geq \frac{1}{6} \cdot 2\sqrt{2}
+               = \frac{\sqrt{2}}{3},
+      \]\hfill（12 分）
+
+      所以
+      $\sin C = \sqrt{1 - \cos^2 C} \leq \sqrt{1 - \dfrac{2}{9}} = \dfrac{\sqrt{7}}{3}$，
+
+      等号成立当且仅当 $\dfrac{2a}{b} = \dfrac{b}{a}$，即 $b = \sqrt{2}\,a$，
+      此时 $a : b : c = \sqrt{3} : \sqrt{6} : \sqrt{5}$.
+      因此 $\sin C$ 的最大值是 $\dfrac{\sqrt{7}}{3}$.\hfill（16 分）
+    \end{solution}
+
+  % ---- 第 10 题 ----
+  \item （本题满分 20 分）\;
+    已知 $f(x)$ 是 $\mathbb{R}$ 上的奇函数，$f(1) = 1$，
+    且对任意 $x > 0$，均有
+    $f\!\left(\dfrac{x}{x+1}\right) = xf(x)$.求
+    \[
+      f(1)\,f\!\left(\frac{1}{100}\right)
+      + f\!\left(\frac{1}{2}\right) f\!\left(\frac{1}{99}\right)
+      + f\!\left(\frac{1}{3}\right) f\!\left(\frac{1}{98}\right)
+      + \cdots
+      + f\!\left(\frac{1}{50}\right) f\!\left(\frac{1}{51}\right)
+    \]
+    的值.
+    \begin{solution}
+      设 $a_n = f\!\left(\dfrac{1}{n}\right)$（$n = 1, 2, 3, \ldots$），则 $a_1 = f(1) = 1$.
+
+      在 $f\!\left(\dfrac{x}{x+1}\right) = xf(x)$ 中取 $x = \dfrac{1}{k}$
+      （$k \in \mathbb{N}^*$，$k \geq 1$），注意到
+      $\dfrac{x}{x+1} = \dfrac{1/k}{1/k + 1} = \dfrac{1}{k+1}$，
+      及 $f(x)$ 为奇函数，可知
+      \[
+        f\!\left(\frac{1}{k+1}\right)
+        = \frac{1}{k}\,f\!\left(\frac{1}{k}\right),
+      \]
+      即 $a_{k+1} = \dfrac{a_k}{k}$.\hfill（5 分）
+
+      从而
+      $a_n = \dfrac{a_1}{1 \cdot 2 \cdots (n-1)} = \dfrac{1}{(n-1)!}$.\hfill（10 分）
+
+      因此
+      \begin{align*}
+        \sum_{i=1}^{50} a_i\, a_{101-i}
+        &= \sum_{i=1}^{50} \frac{1}{(i-1)!\,(100-i)!}
+         = \sum_{j=0}^{49} \frac{1}{j!\,(99-j)!} \\
+        &= \frac{1}{99!} \sum_{j=0}^{49} \binom{99}{j}
+         = \frac{1}{99!} \cdot \frac{2^{99}}{2}
+         = \frac{2^{98}}{99!}.
+      \end{align*}
+      \hfill（20 分）
+    \end{solution}
+
+  % ---- 第 11 题 ----
+  \item （本题满分 20 分）\;
+    在平面直角坐标系 $xOy$ 中，$F$ 是 $x$ 轴正半轴上的一个动点.
+    以 $F$ 为焦点、$O$ 为顶点作抛物线 $C$.
+    设 $P$ 是第一象限内 $C$ 上的一点，$Q$ 是 $x$ 轴负半轴上一点，
+    使得 $PQ$ 为 $C$ 的切线，且 $|PQ| = 2$.
+    圆 $C_1$, $C_2$ 均与直线 $OP$ 相切于点 $P$，且均与 $x$ 轴相切.
+    求点 $F$ 的坐标，使圆 $C_1$ 与 $C_2$ 的面积之和取到最小值.
+    \begin{solution}
+      设抛物线 $C$ 的方程是 $y^2 = 2px$（$p > 0$），
+      点 $Q$ 的坐标为 $(-a,\,0)$（$a > 0$），
+      并设 $C_1$, $C_2$ 的圆心分别为 $O_1(x_1,y_1)$, $O_2(x_2,y_2)$.
+
+      设直线 $PQ$ 的方程为 $x = my - a$（$m > 0$），
+      将其与 $C$ 的方程联立，消去 $x$ 可知
+      $y^2 - 2pmy + 2pa = 0$.
+      因为 $PQ$ 与 $C$ 相切于点 $P$，所以上述方程的判别式为
+      $\Delta = 4p^2 m^2 - 8pa = 0$，
+      解得 $m = \sqrt{\dfrac{2a}{p}}$.
+      进而可知，点 $P$ 的坐标为 $(x_P,\,y_P) = (a,\,\sqrt{2pa})$.
+      于是
+      \[
+        |PQ| = \sqrt{1 + m^2} \cdot y_P
+             = \sqrt{1 + \frac{2a}{p}} \cdot \sqrt{2pa}
+             = \sqrt{2a(p + 2a)}.
+      \]
+      由 $|PQ| = 2$ 可得
+      \[
+        4a^2 + 2pa = 4. \tag{$*$}
+      \]\hfill（5 分）
+
+      注意到 $OP$ 与圆 $C_1$, $C_2$ 相切于点 $P$，
+      所以 $O_1$, $P$, $O_2$ 共线且 $O_1 O_2 \perp OP$.
+      又圆 $C_1$, $C_2$ 与 $x$ 轴分别相切于点 $M$, $N$，
+      则 $OO_1$, $OO_2$ 分别是 $\angle POM$, $\angle PON$ 的平分线，
+      故 $\angle O_1 OO_2 = 90°$.
+      从而由射影定理知
+      \[
+        y_1 y_2 = O_1 M \cdot O_2 N = O_1 P \cdot O_2 P
+                = OP^2 = x_P^2 + y_P^2 = a^2 + 2pa.
+      \]
+      结合 ($*$)，就有
+      \[
+        y_1 y_2 = a^2 + 2pa = a^2 + (4 - 4a^2) = 4 - 3a^2. \tag{$**$}
+      \]\hfill（10 分）
+
+      由 $O_1$, $P$, $O_2$ 共线，可得
+      \[
+        \frac{y_1 - y_P}{y_P - y_2}
+        = \frac{O_1 P}{PO_2}
+        = \frac{O_1 M}{O_2 N}
+        = \frac{y_1}{y_2},
+      \]
+      化简得
+      \[
+        y_1 + y_2 = \frac{2 y_1 y_2}{\sqrt{2pa}}. \tag{$***$}
+      \]\hfill（15 分）
+
+      令 $T = y_1^2 + y_2^2$，则圆 $C_1$, $C_2$ 的面积之和为 $\pi T$.
+      根据 ($**$), ($***$) 可知，
+      \[
+        T = (y_1 + y_2)^2 - 2y_1 y_2
+          = \frac{4(y_1 y_2)^2}{2pa} - 2y_1 y_2
+          = \frac{(2 - a^2)(4 - 3a^2)}{1 - a^2}.
+      \]
+      作代换 $s = 1 - a^2$.由 ($*$) 知 $0 < a < 1$，故 $s \in (0,\,1)$.于是
+      \[
+        T = \frac{1}{s} + 4 + 3s
+          \geq 2\sqrt{3s \cdot \frac{1}{s}} + 4
+          = 2\sqrt{3} + 4.
+      \]
+      上式等号成立当且仅当 $3s = \dfrac{1}{s}$，即 $s = \dfrac{1}{\sqrt{3}}$，
+      此时 $a^2 = 1 - \dfrac{1}{\sqrt{3}}$.
+      由 ($*$) 得 $p = \dfrac{2(1-a^2)}{a} = \dfrac{2}{a\sqrt{3}}$，
+      从而
+      \[
+        F = \left(\frac{p}{2},\, 0\right)
+          = \left(\frac{1}{\sqrt{3-\sqrt{3}}},\, 0\right).
+      \]
+    \end{solution}
+\end{enumerate}
+
+\end{document}
